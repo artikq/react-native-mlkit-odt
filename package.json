@@ -32,6 +32,10 @@
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "keywords": [
+    "google-mlkit",
+    "mlkit",
+    "odt",
+    "object-detection",
     "react-native",
     "ios",
     "android"
