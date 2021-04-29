@@ -11,11 +11,13 @@ npm install react-native-mlkit-odt
 ## Usage
 
 ```js
-import MlkitOdt from "react-native-mlkit-odt";
+import MlkitOdt from 'react-native-mlkit-odt';
 
 // ...
 
-const result = await MlkitOdt.multiply(3, 7);
+const result = await MlkitOdt.detectFromUri(uri, config);
+// OR
+const result = await MlkitOdt.detectFromUri(uri);
 ```
 
 ## Contributing
