@@ -1,11 +1,11 @@
 {
   "name": "react-native-mlkit-odt",
   "version": "0.1.0",
-  "description": "React native google mlkit odt bindings",
-  "main": "src/index.tsx",
-  "module": "lib/module/index.js",
-  "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index.tsx",
+  "description": "Google on-device MLKit object detection for React Native",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index",
   "source": "src/index",
   "files": [
     "src",
