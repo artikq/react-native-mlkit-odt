@@ -44,8 +44,8 @@ function launchGallery(
         setResult(
           await MlkitOdt.detectFromUri(response.uri, {
             detectorMode: 1,
-            shouldEnableClassification: true,
-            shouldEnableMultipleObjects: true,
+            shouldEnableClassification: false,
+            shouldEnableMultipleObjects: false,
           })
         );
       } catch (e) {
