@@ -33,8 +33,11 @@ const defaultOptions: ObjectDetectorOptions = {
   shouldEnableMultipleObjects: false,
 };
 
+const unwrapResult = (res: ObjectDetectionResult | { error: any }) =>
+  'error' in res ? Promise.reject(res) : res;
+
 const wrapper = {
-  detectFromUri: async (
+  detectFromUri: (
     uri: string,
     config: ObjectDetectorOptions = defaultOptions
   ): Promise<ObjectDetectionResult[]> =>
@@ -45,7 +48,7 @@ const wrapper = {
         : defaultOptions.detectorMode,
       config.shouldEnableClassification ? 1 : 0,
       config.shouldEnableMultipleObjects ? 1 : 0
-    ),
+    ).then(unwrapResult),
 };
 
 type MlkitOdtType = typeof wrapper;
