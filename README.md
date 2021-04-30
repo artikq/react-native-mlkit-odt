@@ -11,12 +11,14 @@ npm install react-native-mlkit-odt
 ## Usage
 
 ```js
-import MlkitOdt from 'react-native-mlkit-odt';
+import MlkitOdt, { ObjectDetectorMode } from 'react-native-mlkit-odt';
 
-// ...
-
-const result = await MlkitOdt.detectFromUri(uri, config);
-// OR
+const result = await MlkitOdt.detectFromUri(uri, {
+  detectorMode: ObjectDetectorMode.SINGLE_IMAGE,
+  shouldEnableClassification: true,
+  shouldEnableMultipleObjects: true,
+});
+// OR detect with default config
 const result = await MlkitOdt.detectFromUri(uri);
 ```
 
